@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="userPage.css" />
+    <title>ProTekz</title>
+  </head>
+
+  <body>
+    <header class="mainHeader">
+      <div class="header-content">
+        <ul class="menuBar">
+          <li><a href="userPage.html">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Desktop</a></li>
+          <li><a href="#">Laptop</a></li>
+          <li><a href="#">Build A PC</a></li>
+          <li><a href="#">Price List</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="Registration">
+          <button id="profileButton">User Profile</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="boarder">
+      <div class="computer">
+        <img src="background-design-animation/computer.png" alt="cube" />
+      </div>
+      <div class="electronics">
+        <img src="background-design-animation/electronics.png" alt="cube" />
+      </div>
+      <div class="laptop">
+        <img src="background-design-animation/laptop.png" alt="cube" />
+      </div>
+      <div class="motherboard">
+        <img src="background-design-animation/motherboard.png" alt="cube" />
+      </div>
+      <div class="processor">
+        <img src="background-design-animation/processor.png" alt="" />
+      </div>
+      <h1>Welcome To ProTekz</h1>
+      <div class="message">
+        <p>Revolutionizing Tech, One Innovation at a Time</p>
+      </div>
+    </div>
+
+    <div class="productContainer">
+      <h2>Products</h2>
+      <div class="product-row">
+        <div class="product-item">
+          <img
+            src="product-img/product1.jpg"
+            alt="Product 1"
+            class="product-image1"
+          />
+          <h3>ASUS ROG Strix Z590-E Gaming Motherboard</h3>
+          <p>
+            <br /><b>Stocks: 0 </b> <br />
+            The ASUS ROG Strix Z590-E is a high-end gaming motherboard with
+            support for Intel 10th and 11th Gen processors. It features Wi-Fi 6,
+            Bluetooth 5.2, dual M.2 slots, and robust power delivery for
+            overclocking.
+          </p>
+          <div class="price-and-button">
+            <span>₱25,555</span>
+            <button id="cartBtn1" class="out-of-stock">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product2.jpg"
+            alt="Product 2"
+            class="product-image2"
+          />
+          <h3>NVIDIA GeForce RTX 3080 Graphics Card</h3>
+          <p>
+            <br />
+            <b>Stocks: 20 </b> <br />
+            The NVIDIA RTX 3080 is a powerful graphics card designed for gaming
+            and content creation. It offers ray tracing, DLSS, and 10 GB of
+            GDDR6X memory.
+          </p>
+          <div class="price-and-button">
+            <span>₱85,000</span>
+            <button onclick="openModal()">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product3.jpg"
+            alt="Product 3"
+            class="product-image3"
+          />
+          <h3>AMD Ryzen 9 5950X CPU</h3>
+          <br />
+          <p>
+            <br />
+            <b>Stocks: 15 </b> <br />
+            The AMD Ryzen 9 5950X is a 16-core, 32-thread processor, perfect for
+            high-performance gaming and multitasking. It features a boost clock
+            of 4.9 GHz.
+          </p>
+          <div class="price-and-button">
+            <span>₱34,299</span>
+            <button onclick="openModal3()">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product4.jpg"
+            alt="Product 4"
+            class="product-image4"
+          />
+          <h3>Samsung 970 EVO Plus 1TB NVMe SSD</h3>
+          <p>
+            <br />
+            <b>Stocks: 30 </b> <br />
+            The Samsung 970 EVO Plus is a high-speed NVMe SSD with a capacity of
+            1TB. It offers fast read and write speeds for improved system
+            performance.
+          </p>
+          <div class="price-and-button">
+            <span>₱4,400</span>
+            <button id="cartBtn4" onclick="openModal4()">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product5.jpg"
+            alt="Product 5"
+            class="product-image5"
+          />
+          <h3>Corsair Vengeance RGB Pro 32GB DDR4 RAM</h3>
+          <p>
+            <br />
+            <b>Stocks: 20</b> <br />
+            Corsair's Vengeance RGB Pro is a 32GB DDR4 RAM kit with stunning RGB
+            lighting. It provides excellent performance for gaming and
+            multitasking.
+          </p>
+          <div class="price-and-button">
+            <span>₱2,500</span>
+            <button id="cartBtn5">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product6.jpg"
+            alt="Product 6"
+            class="product-image6"
+          />
+          <h3>Seagate BarraCuda 2TB HDD</h3>
+          <p>
+            <br />
+            <b>Stocks: 10</b> <br />
+            The Seagate BarraCuda is a 2TB hard disk drive for mass storage.
+            It's reliable and perfect for storing large files and games.
+          </p>
+          <div class="price-and-button">
+            <span>₱3,200</span>
+            <button id="cartBtn6">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product7.jpg"
+            alt="Product 7"
+            class="product-image7"
+          />
+          <h3>NZXT Kraken X63 AIO Liquid Cooler</h3>
+          <p>
+            <br /><b>Stocks:10 </b><br />
+            The NZXT Kraken X63 is an all-in-one liquid cooler with a 280mm
+            radiator. It keeps your CPU cool and features customizable RGB
+            lighting.
+          </p>
+          <div class="price-and-button">
+            <span>₱8,250</span>
+            <button id="cartBtn7">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product8.jpg"
+            alt="Product 8"
+            class="product-image8"
+          />
+          <h3>EVGA 850W 80+ Gold Certified Power Supply</h3>
+          <p>
+            <br />
+            <b>Stocks: 15 </b> <br />
+            EVGA's 850W power supply is 80+ Gold certified, ensuring efficient
+            and stable power delivery to your PC components.
+          </p>
+          <div class="price-and-button">
+            <span>₱16,999</span>
+            <button id="cartBtn8">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product9.jpg"
+            alt="Product 9"
+            class="product-image9"
+          />
+          <h3>MSI MPG B550 Gaming Edge WiFi Motherboard</h3>
+          <br />
+          <br />
+          <p>
+            <br />
+            <b>Stocks:20 </b> <br />
+            The MSI MPG B550 Gaming Edge WiFi is a feature-packed motherboard
+            with support for AMD Ryzen processors, Wi-Fi 6, and PCIe 4.0.
+          </p>
+          <div class="price-and-button">
+            <span>₱8,699</span>
+            <button id="cartBtn9">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product10.jpg"
+            alt="Product 10"
+            class="product-image10"
+          />
+          <h3>Logitech G Pro X Mechanical Gaming Keyboard</h3>
+          <br />
+          <p>
+            <br />
+            <b>Stocks: 25</b> <br />
+            The Logitech G Pro X is a tenkeyless mechanical gaming keyboard with
+            hot-swappable switches. Customize it to your preferred switch type.
+          </p>
+          <div class="price-and-button">
+            <span>₱7,015</span>
+            <button id="cartBtn10">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product11.png"
+            alt="Product 11"
+            class="product-image11"
+          />
+          <h3>SteelSeries Rival 600 Gaming Mouse</h3>
+          <br />
+          <br />
+          <p>
+            <br />
+            <b>Stocks: 15</b> <br />
+            The SteelSeries Rival 600 is a high-precision gaming mouse with dual
+            sensors for accurate tracking and customizable weights.
+          </p>
+          <div class="price-and-button">
+            <span>₱3,879</span>
+            <button id="cartBtn11">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product12.jpg"
+            alt="Product 12"
+            class="product-image12"
+          />
+          <h3>ASUS VG279Q 27" 1080p Gaming Monitor</h3>
+          <br />
+          <br />
+          <p>
+            <br />
+            <b>Stocks: 10</b> <br />
+            The ASUS VG279Q is a 27" 1080p gaming monitor with a 144Hz refresh
+            rate and Adaptive Sync. It provides smooth gaming visuals.
+          </p>
+          <div class="price-and-button">
+            <span>₱20,250</span>
+            <button id="cartBtn12">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <div>
+          <img
+            src="product-img/product2.jpg"
+            alt="Product 1"
+            class="product-img1"
+          />
+        </div>
+        <div class="product-info1">
+          <h3>ASUS ROG Strix Z590-E Gaming Motherboard</h3>
+          <p>
+            <br /><b>Stocks: </b> <br />
+            The ASUS ROG Strix Z590-E is a high-end gaming motherboard with
+            support for Intel 10th and 11th Gen processors. It features Wi-Fi 6,
+            Bluetooth 5.2, dual M.2 slots, and robust power delivery for
+            overclocking.
+          </p>
+          <div class="transaction">
+            <span>₱85,000</span>
+            <button onclick="openModal2()">Buy</button>
+          </div>
+        </div>
+        <span class="close">&times;</span>
+      </div>
+    </div>
+
+    <div id="productModal3" class="modal">
+      <div class="modal-content">
+        <div>
+          <img
+            src="product-img/product3.jpg"
+            alt="Product 1"
+            class="product-img1"
+          />
+        </div>
+        <div class="product-info1">
+          <h3>AMD Ryzen 9 5950X CPU</h3>
+          <p>
+            <br /><b>Stocks: </b> <br />
+            The AMD Ryzen 9 5950X is a 16-core, 32-thread processor, perfect for
+            high-performance gaming and multitasking. It features a boost clock
+            of 4.9 GHz.
+          </p>
+          <div class="transaction">
+            <span>₱42,299</span>
+            <button>Buy</button>
+          </div>
+        </div>
+        <span class="close" onclick="closeModal3()">&times;</span>
+      </div>
+    </div>
+
+    <div id="productModal4" class="modal">
+      <div class="modal-content">
+        <div>
+          <img
+            src="product-img/product4.jpg"
+            alt="Product 4"
+            class="product-img1"
+          />
+        </div>
+        <div class="product-info1">
+          <h3>Samsung 970 EVO Plus 1TB NVMe SSDU</h3>
+          <p>
+            <br /><b>Stocks: </b> <br />
+            The Samsung 970 EVO Plus is a high-speed NVMe SSD with a capacity of
+            1TB. It offers fast read and write speeds for improved system
+            performance.
+          </p>
+          <div class="transaction">
+            <span>₱4,400</span>
+            <button>Buy</button>
+          </div>
+        </div>
+        <span class="close" onclick="closeModal4()">&times;</span>
+      </div>
+    </div>
+    <!--Transaction Modal-->
+
+    <script>
+
+      // Function to open the modal
+      function openModal() {
+        document.getElementById("productModal").style.display = "block";
+      }
+
+      // Function to close the modal
+      function closeModal() {
+        document.getElementById("productModal").style.display = "none";
+      }
+
+      function openModal3() {
+        document.getElementById("productModal3").style.display = "block";
+      }
+
+      function closeModal3() {
+        document.getElementById("productModal3").style.display = "none";
+      }
+
+      function openModal4() {
+        document.getElementById("productModal4").style.display = "block";
+      }
+
+      function closeModal4() {
+        document.getElementById("productModal4").style.display = "none";
+      }
+
+      document
+        .querySelector(".modal-content .close")
+        .addEventListener("click", function () {
+          closeModal();
+        });
+    </script>
+  </body>
+</html>

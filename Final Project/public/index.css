@@ -1,0 +1,338 @@
+/*Header*/
+
+body {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #4a8668;
+  --sb-size: 14px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 14px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 14px;
+}
+
+.mainHeader {
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Add padding for spacing */
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+}
+
+/*Menu Bar*/
+.menuBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center; /* Center-align menu items */
+  align-items: center;
+}
+
+.menuBar li {
+  display: inline-block; /* Display menu items horizontally */
+  font-size: 16px;
+  text-align: center;
+  margin-right: 20px; /* Add spacing between menu items */
+}
+
+.menuBar li:last-child {
+  margin-right: 0; /* Remove margin for the last item */
+}
+
+.menuBar li a {
+  display: block;
+  color: black; /* Text color for menu items */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menuBar li a:hover {
+  background-color: #555; /* Background color on hover */
+  color: white;
+}
+
+/*Sign up or Log in*/
+.Registration {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.Registration button {
+  position: relative;
+  background-color: white; /* Background color inside the button */
+  border: 2px solid black; /* Red border */
+  margin-left: 20px; /* Add spacing between buttons */
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  height: 45px;
+  width: 90px;
+  border-radius: 7px;
+}
+
+.Registration button::before {
+  content: ""; /* Empty content to create the pseudo-element */
+  position: absolute;
+  top: -1px; /* Position the border above the button */
+  left: 0px; /* Position the border to the left of the button */
+  width: calc(
+    100% + 2px
+  ); /* Calculate the width to cover the button and border */
+  height: calc(
+    100% + 3px
+  ); /* Calculate the height to cover the button and border */
+  border: 2px solid black; /* Red border for the effect */
+  border-radius: 7px; /* Match the button's border radius */
+  transition: opacity 0.3s ease; /* Transition for the border effect */
+  opacity: 0; /* Initially, the border is transparent */
+  pointer-events: none; /* Allows interactions with the button beneath */
+}
+
+.Registration button:hover::before {
+  left: 0; /* Slide the layer in from the right when button is hovered */
+  opacity: 1;
+}
+
+.Registration button:hover,
+.Registration button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+/*The text*/
+.boarder {
+  margin-top: 250px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 32px;
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+}
+
+/* Animations*/
+
+.floatingSquare {
+  width: 70px; /* Set the width of the square */
+  height: 70px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 20%; /* Position the top edge of the square at the vertical center */
+  left: 50%; /* Position the left edge of the square at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 4s ease-in-out infinite;
+}
+
+.computer {
+  width: 50px; /* Set the width of the square */
+  height: 50px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 60%; /* Position the top edge of the square at the vertical center */
+  left: 10%; /* Position the left edge of the square at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 5s ease-in-out infinite;
+}
+
+.electronics {
+  width: 50px; /* Set the width of the square */
+  height: 50px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 65%; /* Position the top edge of the square at the vertical center */
+  left: 79%; /* Position the left edge of the square at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 2s ease-in-out infinite;
+}
+
+.laptop {
+  width: 50px; /* Set the width of the square */
+  height: 50px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 30%; /* Position the top edge of the square at the vertical center */
+  left: 48%; /* Position the left edge of the square at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 5s ease-in-out infinite;
+}
+
+.motherboard {
+  width: 50px; /* Set the width of the square */
+  height: 50px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 35%; /* Position the top edge of the square at the vertical center */
+  left: 75%; /* Position the left edge of the square at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.processor {
+  width: 50px; /* Set the width of the square */
+  height: 50px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 30%; /* Position the top edge of the square at the vertical center */
+  left: 20%; /* Position the left edge of the square at the horizontal center */
+  right: 30%;
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0); /* Initial and final positions */
+  }
+  50% {
+    transform: translateY(-20px); /* Float up in the middle of the animation */
+  }
+}
+
+.message {
+  margin-top: 500px;
+  margin-bottom: 500px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+}
+
+.img-description {
+  background-color: rgb(0, 0, 0);
+  height: 2300px;
+  width: 100%;
+  margin-left: 0%;
+}
+
+.container1 {
+  width: 1000px;
+  height: 50px;
+  margin-bottom: 500px;
+  display: flex;
+}
+
+.container1 p {
+  width: 630px;
+  padding: 20px;
+  margin-left: 30px;
+  margin-right: 50px;
+  margin-top: 150px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+  color: rgb(255, 255, 255);
+}
+
+.hardware1 {
+  position: absolute;
+  left: 55%;
+  height: 350px;
+  width: 550px;
+  margin-left: 5px;
+  margin-top: 80px;
+}
+
+.container2 {
+  width: 1000px;
+  height: 50px;
+  color: rgb(0, 0, 0);
+  margin-top: 800px;
+}
+
+.container2 p {
+  position: absolute;
+  text-align: center;
+  margin-left: 75px;
+  margin-top: 5px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+  color: rgb(255, 255, 255);
+}
+
+.hardware2 {
+  height: 400px;
+  width: 1440px;
+  margin-bottom: 200px;
+  margin-left: 15px;
+  margin-top: 150px;
+}
+
+.container3 {
+  width: 1000px;
+  height: 50px;
+  color: rgb(0, 0, 0);
+  margin-top: 530px;
+  display: flex;
+}
+
+.container3 p {
+  width: 600px;
+  margin-top: 450px;
+  margin-left: 50px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+  color: white;
+}
+
+.hardware3 {
+  position: absolute;
+  top: 450%;
+  left: 50%;
+  height: 330px;
+  width: 630px;
+}
+
+
+.footer{
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+  text-align: justify;
+  font-size: large;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Add padding for spacing */
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+}
+
+.logo-text{
+
+}

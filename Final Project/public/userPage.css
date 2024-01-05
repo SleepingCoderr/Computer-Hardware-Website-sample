@@ -1,0 +1,460 @@
+/*Header*/
+.mainHeader {
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Add padding for spacing */
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+}
+
+/*Menu Bar*/
+.menuBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center; /* Center-align menu items */
+  align-items: center;
+}
+
+.menuBar li {
+  display: inline-block; /* Display menu items horizontally */
+  font-size: 16px;
+  text-align: center;
+  margin-right: 20px; /* Add spacing between menu items */
+}
+
+.menuBar li:last-child {
+  margin-right: 0; /* Remove margin for the last item */
+}
+
+.menuBar li a {
+  display: block;
+  color: black; /* Text color for menu items */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menuBar li a:hover {
+  background-color: #555; /* Background color on hover */
+  color: white;
+}
+
+/*Sign up or Log in*/
+.Registration {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.Registration button {
+  position: relative;
+  background-color: white; /* Background color inside the button */
+  border: 2px solid black; /* Red border */
+  margin-left: 5px; /* Add spacing between buttons */
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  height: 45px;
+  width: 110px;
+  border-radius: 7px;
+}
+
+.Registration button::before {
+  content: ""; /* Empty content to create the pseudo-element */
+  position: absolute;
+  top: -1px; /* Position the border above the button */
+  left: 0px; /* Position the border to the left of the button */
+  width: calc(
+    100% + 2px
+  ); /* Calculate the width to cover the button and border */
+  height: calc(
+    100% + 3px
+  ); /* Calculate the height to cover the button and border */
+  border: 2px solid black; /* Red border for the effect */
+  border-radius: 7px; /* Match the button's border radius */
+  transition: opacity 0.3s ease; /* Transition for the border effect */
+  opacity: 0; /* Initially, the border is transparent */
+  pointer-events: none; /* Allows interactions with the button beneath */
+}
+
+.Registration button:hover::before {
+  left: 0; /* Slide the layer in from the right when button is hovered */
+  opacity: 1;
+}
+
+.Registration button:hover,
+.Registration button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+/*The text*/
+.boarder {
+  margin-top: 250px;
+  text-align: center;
+  font-size: 32px;
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+}
+
+.boarder button {
+  position: relative;
+  background-color: white; /* Background color inside the button */
+  border: 2px solid black; /* Red border */
+  margin-left: 20px; /* Add spacing between buttons */
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  margin-bottom: 300px;
+}
+
+.boarder button:hover {
+  background-color: #555; /* Background color on hover */
+  color: white;
+}
+
+.message{
+  margin-top: 300px;
+}
+
+/*Search Bar */
+
+.out-of-stock {
+  background-color: #ccc; /* Gray background */
+  color: #888; /* Dark gray text */
+  cursor: not-allowed; /* Show the "not allowed" cursor */
+  pointer-events: none; /* Make the button not clickable */
+}
+
+/*Products*/
+.productContainer {
+  width: 85%; /* Set the width of the product container */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-top: 300px;
+  padding: 20px; /* Add spacing inside the container */
+  background-color: #f2f2f2; /* Set a background color for the container */
+  border: 1px solid #ddd; /* Add a border to the container */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+.productContainer h2 {
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+}
+
+.product-row {
+  display: flex; /* Create a flex container for product rows */
+  flex-wrap: wrap; /* Allow products to wrap to the next row */
+  margin-left: 50px;
+}
+
+.product-item {
+  width: 20%; /* Each product item takes up 20% of the container's width (5 items per row) */
+  margin: 1%; /* Add spacing between product items */
+  padding: 10px; /* Add spacing inside product items */
+  border: 1px solid black; /* Add a border to each product item */
+  border-radius: 5px; /* Add rounded corners to product items */
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.price-and-button {
+  display: flex; /* Use flex layout for price and button */
+  flex-direction: column; /* Stack price and button vertically */
+  align-items: center; /* Center-align price and button horizontally */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-top: auto;
+  text-align: center;
+}
+
+.price-and-button span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.price-and-button button {
+  position: relative;
+  background-color: white; /* Background color inside the button */
+  border: 2px solid black; /* Red border */
+  margin-left: 20px; /* Add spacing between buttons */
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.price-and-button button:hover {
+  background-color: #555; /* Background color on hover */
+  color: white;
+}
+.product-item img {
+  max-width: 100%; /* Ensure images don't exceed the container width */
+}
+
+/* Style headings, text, and prices within product items as needed */
+.product-item h3 {
+  font-size: 20px;
+}
+
+.product-item p {
+  height: 200px;
+  font-size: 16px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  margin: 10;
+}
+
+.product-item span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-image1 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+.product-image2 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+.product-image3 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+.product-image4 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+.product-image5 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+.product-image6 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+.product-image7 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+.product-image8 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+.product-image9 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+.product-image10 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+.product-image11 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+.product-image12 {
+  max-width: 100%; /* Set the maximum width to prevent images from exceeding their containers */
+  max-height: 200px; /* Set the maximum height to control image height */
+}
+
+/* Animations*/
+
+.floatingSquare {
+  width: 70px; /* Set the width of the square */
+  height: 70px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 20%; /* Position the top edge of the square at the vertical center */
+  left: 50%; /* Position the left edge of the square at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 4s ease-in-out infinite;
+}
+
+.computer {
+  width: 50px; /* Set the width of the square */
+  height: 50px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 60%; /* Position the top edge of the square at the vertical center */
+  left: 10%; /* Position the left edge of the square at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 5s ease-in-out infinite;
+}
+
+.electronics {
+  width: 50px; /* Set the width of the square */
+  height: 50px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 65%; /* Position the top edge of the square at the vertical center */
+  left: 79%; /* Position the left edge of the square at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 2s ease-in-out infinite;
+}
+
+.laptop {
+  width: 50px; /* Set the width of the square */
+  height: 50px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 30%; /* Position the top edge of the square at the vertical center */
+  left: 48%; /* Position the left edge of the square at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 5s ease-in-out infinite;
+}
+
+.motherboard {
+  width: 50px; /* Set the width of the square */
+  height: 50px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 35%; /* Position the top edge of the square at the vertical center */
+  left: 75%; /* Position the left edge of the square at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.processor {
+  width: 50px; /* Set the width of the square */
+  height: 50px; /* Set the height of the square */
+  position: absolute; /* Position the square relative to its closest positioned ancestor */
+  top: 30%; /* Position the top edge of the square at the vertical center */
+  left: 20%; /* Position the left edge of the square at the horizontal center */
+  right: 30%;
+  transform: translate(-50%, -50%); /* Center the square precisely */
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0); /* Initial and final positions */
+  }
+  50% {
+    transform: translateY(-20px); /* Float up in the middle of the animation */
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-bottom: 300px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.product-img1{
+  height: 350px;
+  width: 350px;
+  margin-left: 200px;
+}
+
+.product-info1{
+  margin-left: 150px;
+  width: 250px;
+  font-family: scandia-web, ui-sans-serif, system-ui, -apple-system,
+  BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+  "Noto Color Emoji";
+}
+
+.prodcut-info1 img{
+  align-items: center;
+}
+
+
+.transaction span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.transaction button {
+  position: relative;
+  background-color: white; /* Background color inside the button */
+  border: 2px solid black; /* Red border */
+  margin-left: 20px; /* Add spacing between buttons */
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.transaction button:hover {
+  background-color: #555; /* Background color on hover */
+  color: white;
+}
+
+

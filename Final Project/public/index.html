@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>ProTekz</title>
+    
+  </head>
+
+  <body>
+    <header class="mainHeader">
+      <div class="header-content">
+        <ul class="menuBar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Desktop</a></li>
+          <li><a href="#">Laptop</a></li>
+          <li><a href="#">Build A PC</a></li>
+          <li><a href="#">Price List</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="Registration">
+          <button id="logInButton">Log-In</button>
+          <button id="signupButton">Sign-up</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="boarder">
+      <div class="computer">
+        <img src="/background-design-animation/computer.png" alt="cube" />
+      </div>
+      <div class="electronics">
+        <img src="background-design-animation/electronics.png" alt="cube" />
+      </div>
+      <div class="laptop">
+        <img src="background-design-animation/laptop.png" alt="cube" />
+      </div>
+      <div class="motherboard">
+        <img src="background-design-animation/motherboard.png" alt="cube" />
+      </div>
+      <div class="processor">
+        <img src="background-design-animation/processor.png" alt="" />
+      </div>
+      <h1>Welcome To ProTekz</h1>
+    </div>
+
+    <div class="message">
+      <p>Your Trusted Destination for Cutting-Edge Technology Solutions</p>
+    </div>
+
+    <div class="img-description">
+      <div class="container1">
+        <p>
+          Experience Blazing-Fast Computing: <br />
+          Your Source for High-Performance CPUs!
+        </p>
+        <img
+          class="hardware1"
+          src="background-design-animation/cpu.jpg"
+          alt="cpu"
+        />
+      </div>
+
+      <div class="container2">
+        <p>
+          Building Dreams, One Component at a Time: Explore Our Computer Parts
+          Emporium!
+        </p>
+        <img
+          class="hardware2"
+          src="background-design-animation/board.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="container3">
+        <p>
+          <b
+            >Elevate Your Computing Experience: <br />Discover Quality
+            Components for Sale Here!</b
+          >
+        </p>
+        <img
+          class="hardware3"
+          src="background-design-animation/wallpaper.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script>
+
+      document
+        .getElementById("signupButton")
+        .addEventListener("click", function () {
+          window.location.href = "regform.html";
+        });
+
+      document
+        .getElementById("logInButton")
+        .addEventListener("click", function () {
+          window.location.href = "loginForm.html";
+        });
+
+      var image1 = document.getElementsByClassName("hardware1");
+      new simpleParallax(image1, {
+        orientation: 'left'
+      });
+    </script>
+  </body>
+</html>

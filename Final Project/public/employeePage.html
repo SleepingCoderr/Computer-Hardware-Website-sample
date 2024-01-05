@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="employeePage.css" />
+    <title>ProTekz</title>
+  </head>
+
+  <body>
+    <header class="mainHeader">
+      <div class="header-content">
+        <ul class="menuBar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Desktop</a></li>
+          <li><a href="#">Laptop</a></li>
+          <li><a href="#">Build A PC</a></li>
+          <li><a href="#">Price List</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="Registration">
+          <button id="logInButton">Employee</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="boarder">
+      <div class="computer">
+        <img src="background-design-animation/computer.png" alt="cube" />
+      </div>
+      <div class="electronics">
+        <img src="background-design-animation/electronics.png" alt="cube" />
+      </div>
+      <div class="laptop">
+        <img src="background-design-animation/laptop.png" alt="cube" />
+      </div>
+      <div class="motherboard">
+        <img src="background-design-animation/motherboard.png" alt="cube" />
+      </div>
+      <div class="processor">
+        <img src="background-design-animation/processor.png" alt="" />
+      </div>
+      <h1>Welcome To ProTekz</h1>
+      <div class="message">
+        <p>Innovate. Elevate. Tech Appreciate</p>
+      </div>
+    </div>
+    <div class="productContainer">
+      <h2>Products</h2>
+      <div class="product-row">
+        <div class="product-item" id="product-item1">
+          <img
+            src="product-img/product1.jpg"
+            alt="Product 1"
+            class="product-image1"
+          />
+          <h3>ASUS ROG Strix Z590-E Gaming Motherboard</h3>
+          <br /><b>Stocks:</b><span id="stocks1">10</span> <br />
+          <p id="p1">
+            The ASUS ROG Strix Z590-E is a high-end gaming motherboard with
+            support for Intel 10th and 11th Gen processors. It features Wi-Fi 6,
+            Bluetooth 5.2, dual M.2 slots, and robust power delivery for
+            overclocking.
+          </p>
+          <div class="price-and-button">
+            <span id="price1">₱25,555</span>
+            <button>Delete</button>
+            <button id="editBtn" onclick="openModal('p1', 'price1', 'stocks1')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product2.jpg"
+            alt="Product 2"
+            class="product-image2"
+          />
+          <h3>NVIDIA GeForce RTX 3080 Graphics Card</h3>
+          <br /><b>Stocks:</b><span id="stocks2">20</span> <br />
+          <p id="p2">
+            The NVIDIA RTX 3080 is a powerful graphics card designed for gaming
+            and content creation. It offers ray tracing, DLSS, and 10 GB of
+            GDDR6X memory.
+          </p>
+          <div class="price-and-button">
+            <span id="price2">₱85,000</span>
+            <button>Delete</button>
+            <button onclick="openModal('p2', 'price2','stocks2')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product3.jpg"
+            alt="Product 3"
+            class="product-image3"
+          />
+          <h3>AMD Ryzen 9 5950X CPU</h3>
+          <br />
+          <br />
+          <b>Stocks:</b><span id="stocks3">15</span> <br />
+          <p id="p3">
+            The AMD Ryzen 9 5950X is a 16-core, 32-thread processor, perfect for
+            high-performance gaming and multitasking. It features a boost clock
+            of 4.9 GHz.
+          </p>
+          <div class="price-and-button">
+            <span id="price3">₱34,299</span>
+            <button>Delete</button>
+            <button onclick="openModal('p3','price3','stocks3')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product4.jpg"
+            alt="Product 4"
+            class="product-image4"
+          />
+          <h3>Samsung 970 EVO Plus 1TB NVMe SSD</h3>
+          <br />
+          <b>Stocks:</b><span id="stocks4">30</span> <br />
+          <p id="p4">
+            The Samsung 970 EVO Plus is a high-speed NVMe SSD with a capacity of
+            1TB. It offers fast read and write speeds for improved system
+            performance.
+          </p>
+          <div class="price-and-button">
+            <span id="price4">₱4,400</span>
+            <button>Delete</button>
+            <button onclick="openModal('p4','price4','stocks4')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product5.jpg"
+            alt="Product 5"
+            class="product-image5"
+          />
+          <h3>Corsair Vengeance RGB Pro 32GB DDR4 RAM</h3>
+          <br />
+          <b>Stocks:</b><span id="stocks5">20</span> <br />
+          <p id="p5">
+            Corsair's Vengeance RGB Pro is a 32GB DDR4 RAM kit with stunning RGB
+            lighting. It provides excellent performance for gaming and
+            multitasking.
+          </p>
+          <div class="price-and-button">
+            <span id="price5">₱2,500</span>
+            <button>Delete</button>
+            <button onclick="openModal('p5', 'price5','stocks5')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product6.jpg"
+            alt="Product 6"
+            class="product-image6"
+          />
+          <h3>Seagate BarraCuda 2TB HDD</h3>
+          <br />
+          <br />
+          <b>Stocks:</b><span id="stocks6">10</span> <br />
+          <p id="p6">
+            The Seagate BarraCuda is a 2TB hard disk drive for mass storage.
+            It's reliable and perfect for storing large files and games.
+          </p>
+          <div class="price-and-button">
+            <span id="price6">₱3,200</span>
+            <button>Delete</button>
+            <button onclick="openModal('p6', 'price6','stocks6')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product7.jpg"
+            alt="Product 7"
+            class="product-image7"
+          />
+          <h3>NZXT Kraken X63 AIO Liquid Cooler</h3>
+          <br /><b>Stocks:</b><span id="stocks7">10</span><br />
+          <p id="p7">
+            The NZXT Kraken X63 is an all-in-one liquid cooler with a 280mm
+            radiator. It keeps your CPU cool and features customizable RGB
+            lighting.
+          </p>
+          <div class="price-and-button">
+            <span id="price7">₱8,250</span>
+            <button>Delete</button>
+            <button onclick="openModal('p7','price7','stocks7')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product8.jpg"
+            alt="Product 8"
+            class="product-image8"
+          />
+          <h3>EVGA 850W 80+ Gold Certified Power Supply</h3>
+          <br />
+          <b>Stocks:</b><span id="stocks8">15</span> <br />
+          <p id="p8">
+            EVGA's 850W power supply is 80+ Gold certified, ensuring efficient
+            and stable power delivery to your PC components.
+          </p>
+          <div class="price-and-button">
+            <span id="price8">₱16,999</span>
+            <button>Delete</button>
+            <button onclick="openModal('p8','price8','stocks8')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product9.jpg"
+            alt="Product 9"
+            class="product-image9"
+          />
+          <h3>MSI MPG B550 Gaming Edge WiFi Motherboard</h3>
+          <br />
+          <br />
+          <br />
+          <b>Stocks:</b><span id="stocks9">20</span> <br />
+          <p id="p9">
+            The MSI MPG B550 Gaming Edge WiFi is a feature-packed motherboard
+            with support for AMD Ryzen processors, Wi-Fi 6, and PCIe 4.0.
+          </p>
+          <div class="price-and-button">
+            <span id="price9">₱8,699</span>
+            <button>Delete</button>
+            <button onclick="openModal('p9','price9','stocks9')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product10.jpg"
+            alt="Product 10"
+            class="product-image10"
+          />
+          <h3>Logitech G Pro X Mechanical Gaming Keyboard</h3>
+          <br />
+          <br />
+          <br />
+          <b>Stocks:</b><span id="stocks10">25</span> <br />
+          <p id="p10">
+            The Logitech G Pro X is a tenkeyless mechanical gaming keyboard with
+            hot-swappable switches. Customize it to your preferred switch type.
+          </p>
+          <div class="price-and-button">
+            <span id="price10">₱7,015</span>
+            <button>Delete</button>
+            <button onclick="openModal('p10','price10','stocks10')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img
+            src="product-img/product11.png"
+            alt="Product 11"
+            class="product-image11"
+          />
+          <h3>SteelSeries Rival 600 Gaming Mouse</h3>
+          <br />
+          <br />
+          <br />
+          <b>Stocks:</b><span id="stocks11">15</span> <br />
+          <p id="p11">
+            The SteelSeries Rival 600 is a high-precision gaming mouse with dual
+            sensors for accurate tracking and customizable weights.
+          </p>
+          <div class="price-and-button">
+            <span id="price11">₱3,879</span>
+            <button>Delete</button>
+            <button onclick="openModal('p11','price11', 'stocks11')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+        <div class="product-item" id="product-item12">
+          <img
+            src="product-img/product12.jpg"
+            alt="Product 12"
+            class="product-image12"
+          />
+          <h3>ASUS VG279Q 27" 1080p Gaming Monitor</h3>
+          <br />
+          <br />
+          <br />
+          <b>Stocks:</b><span id="stocks12">10</span> <br />
+          <p id="p12">
+            The ASUS VG279Q is a 27" 1080p gaming monitor with a 144Hz refresh
+            rate and Adaptive Sync. It provides smooth gaming visuals.
+          </p>
+          <div class="price-and-button">
+            <span id="price12">₱20,250</span>
+            <button>Delete</button>
+            <button onclick="openModal('p12','price12','stocks12')">
+              Edit Product Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="customModal">
+      <label for="newText">Enter new product detail:</label>
+      <input type="text" id="newText" />
+      <label for="newPrice">Enter new price:</label>
+      <input type="text" id="newPrice" />
+      <label for="newStock">Enter Stock:</label>
+      <input type="text" id="newStock" />
+      <button id="btn1" onclick="updateText()">Save</button>
+      <button id="btn2" onclick="closeModal()">Cancel</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("signupButton")
+        .addEventListener("click", function () {
+          window.location.href = "regform.html";
+        });
+
+      var currentElementId;
+
+      function openModal(elementId, priceId, stockId) {
+        currentElementId = elementId;
+        var element = document.getElementById(elementId);
+        var priceElement = document.getElementById(priceId);
+        var stockElement = document.getElementById(stockId);
+        document.getElementById("newText").value = element.textContent;
+        document.getElementById("newStock").value = stockElement.textContent;
+        document.getElementById("newPrice").value =
+          priceElement.textContent.replace("₱", ""); // Extract numeric part of the price
+        document.getElementById("customModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("customModal").style.display = "none";
+      }
+
+      function updateText() {
+        var element = document.getElementById(currentElementId);
+        var newText = document.getElementById("newText").value;
+        var newPrice = document.getElementById("newPrice").value;
+        element.innerHTML = newText;
+        var newStock = document.getElementById("newStock").value;
+        stockElement.innerHTML = "<b>Stocks:</b> <br />" + newStock;
+        // Update the price with the currency symbol
+        var priceElement = document.getElementById(
+          currentElementId.replace("p", "price")
+        );
+        priceElement.innerHTML = "₱" + newPrice;
+
+        closeModal();
+      }
+
+      function deleteProduct(elementId) {
+        var element = document.getElementById(elementId);
+        element.remove();
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var deleteButtons = document.querySelectorAll(".product-item button");
+
+        deleteButtons.forEach(function (button, index) {
+          button.addEventListener("click", function () {
+            var productId = "product-item" + (index + 1);
+            deleteProduct(productId);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
